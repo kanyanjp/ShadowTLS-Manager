@@ -129,7 +129,7 @@ check_system_type() {
 # 检查并安装依赖工具
 install_tools() {
     local missing_tools=()
-    for tool in wget curl openssl jq xz-utils; do
+    for tool in wget curl openssl jq; do
         if ! command -v "$tool" >/dev/null 2>&1; then
             missing_tools+=("$tool")
         fi
